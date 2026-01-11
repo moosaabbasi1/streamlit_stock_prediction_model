@@ -135,11 +135,14 @@ y_test = np.array(y_test)
 
 #  Prediction 
 y_predicted = model.predict(x_test)
+y_predicted = scaler.inverse_transform(y_predicted)
+y_test = scaler.inverse_transform(y.test.reshape(-1,1))
 
 # Reverse scaling
-scale_factor = 1 / scaler.scale_[0]
-y_predicted = y_predicted * scale_factor
-y_test = y_test * scale_factor
+
+#scale_factor = 1 / scaler.scale_[0]
+#y_predicted = y_predicted * scale_factor
+#y_test = y_test * scale_factor
 
 #  Prediction Visualization 
 st.subheader(" Predicted Price vs Original Price")
