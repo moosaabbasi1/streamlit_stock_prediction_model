@@ -136,7 +136,7 @@ y_test = np.array(y_test)
 #  Prediction 
 y_predicted = model.predict(x_test)
 y_predicted = scaler.inverse_transform(y_predicted)
-y_test = scaler.inverse_transform(y.test.reshape(-1,1))
+y_test = scaler.inverse_transform(y_test.reshape(-1,1))
 
 # Reverse scaling
 
