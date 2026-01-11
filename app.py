@@ -79,7 +79,7 @@ fig = go.Figure(data = [go.Candlestick(x = df.index ,
                                        low = df['Low'],
                                        close = df['Close'])])
 fig.update_layout(xaxis_rangeslider_visible = False , title =f"{stock_ticker} Candel stick chart")
-st.plotly_chart(fig , use_container_widht = True)
+st.plotly_chart(fig , use_container_width = True)
     
 #  Closing Price Chart 
 st.subheader(" Closing Price vs Time")
