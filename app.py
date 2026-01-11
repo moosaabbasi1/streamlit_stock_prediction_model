@@ -68,18 +68,18 @@ st.subheader("avaliable columns ")
 st.write(df.columns)
 
 #Candelstick 
-#if isinstance(df.columns , pd.MultiIndex):
- #   df.columns = df.columns.get_level_values(0)
+if isinstance(df.columns , pd.MultiIndex):
+    df.columns = df.columns.get_level_values(0)
 
-#df = df.reset_index()
+df = df.reset_index()
 
-#fig = go.Figure(data = [go.Candlestick(x = df.index ,
- #                                      open = df['Open'],
-  #                                   high = df['High'],
-    #                                    low = df['Low'],
+fig = go.Figure(data = [go.Candlestick(x = df.index ,
+                                       open = df['Open'],
+                                     high = df['High'],
+                                        low = df['Low'],
                                        close = df['Close'])])
-#fig.update_layout(xaxis_rangeslider_visible = False , title =f"{stock_ticker} Candel stick chart")
-#st.plotly_chart(fig , use_container_width = True)
+fig.update_layout(xaxis_rangeslider_visible = False , title =f"{stock_ticker} Candel stick chart")
+st.plotly_chart(fig , use_container_width = True)
     
 #  Closing Price Chart 
 st.subheader(" Closing Price vs Time")
