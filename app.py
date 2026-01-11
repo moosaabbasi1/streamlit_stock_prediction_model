@@ -99,7 +99,7 @@ st.pyplot(fig2)
 
 
 #  Load Trained Model 
-model_path = "/home/moosaabbasi/stock trade predicton/stock_dl_model.h5"
+model_path = "stock_dl_model.h5"
 
 if not os.path.exists(model_path):
     st.error("Model file not found. Please ensure 'stock_dl_model.h5' is in the project directory.")
