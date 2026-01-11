@@ -9,6 +9,11 @@ from sklearn.preprocessing import MinMaxScaler
 import os
 import plotly.graph_objects as go
 
+
+st.write("Current Directory:", os.getcwd())
+st.write("Files in Directory:", os.listdir())
+
+
 #  App Configuration 
 st.set_page_config(page_title="Stock Price Prediction", layout="wide")
 plt.style.use("fivethirtyeight")
